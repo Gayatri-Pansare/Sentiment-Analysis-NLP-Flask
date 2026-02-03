@@ -1,0 +1,126 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2874f0, #6ab7ff);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Card */
+.container {
+    background: #ffffff;
+    width: 70%;
+    max-width: 800px;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Heading */
+h1 {
+    color: #2874f0;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Subtitle */
+.subtitle {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    height: 140px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    outline: none;
+    resize: none;
+    transition: all 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #2874f0;
+    box-shadow: 0 0 8px rgba(40, 116, 240, 0.3);
+}
+
+/* Button */
+button {
+    background: #2874f0;
+    color: #ffffff;
+    border: none;
+    padding: 12px 32px;
+    font-size: 16px;
+    margin-top: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #1c5ed5;
+    transform: scale(1.05);
+}
+
+/* Result Box */
+.result {
+    margin-top: 25px;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+/* Positive Sentiment */
+.result.positive {
+    background: #e6f7ec;
+    color: #2e7d32;
+    border: 2px solid #2e7d32;
+}
+
+/* Negative Sentiment */
+.result.negative {
+    background: #fdecea;
+    color: #c62828;
+    border: 2px solid #c62828;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    textarea {
+        height: 120px;
+    }
+}

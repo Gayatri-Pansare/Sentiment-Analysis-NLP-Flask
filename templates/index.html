@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flipkart Review Sentiment Analyzer</title>
+
+    <!-- Link external CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Flipkart Review Sentiment Analyzer</h1>
+        <p class="subtitle">
+            Enter a product review to analyze whether it is positive or negative
+        </p>
+
+        <form method="POST">
+            <textarea 
+                name="review" 
+                placeholder="Enter your review here..."
+                required
+            >{{ review_text }}</textarea>
+
+            <button type="submit">Analyze Sentiment</button>
+        </form>
+
+        {% if sentiment %}
+            <div class="result {{ sentiment|lower }}">
+                Sentiment: {{ sentiment }}
+            </div>
+        {% endif %}
+
+    </div>
+
+</body>
+</html>
